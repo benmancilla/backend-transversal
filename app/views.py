@@ -4,6 +4,10 @@ from rest_framework.response import Response
 from .models import React,Contact
 from .serializer import ReactSerializer,ContactSerializer
 from .permissions import IsAuthenticatedOrReadOnly
+from django.views.generic import TemplateView
+
+class PageView(TemplateView):
+    template_name = 'app/template.html'
 
 class ReactView(generics.ListCreateAPIView):
     queryset = React.objects.all()
