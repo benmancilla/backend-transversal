@@ -4,7 +4,7 @@ from . models import React,Contact
 class ReactSerializer(serializers.ModelSerializer):
     class Meta:
         model = React
-        fields = ['title','image','link']
+        fields = ['id', 'title', 'image', 'price']
 
 class ContactSerializer(serializers.ModelSerializer):
     class Meta:
